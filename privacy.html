@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Privacy Policy — BoUnitNYC</title>
+<link rel="icon" type="image/png" href="/bounit.png">
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0a12;color:#fff;min-height:100vh}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:0 32px;height:60px;background:rgba(8,8,18,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);position:sticky;top:0;z-index:200}
+.nav-logo{height:44px}
+.nav-back{display:flex;align-items:center;gap:8px;color:#8892b0;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:color .2s}
+.nav-back:hover{color:#fff}
+.nav-back:hover svg{transform:translateX(-3px)}
+.nav-back svg{transition:transform .2s}
+.nav-logo-link{display:flex;align-items:center}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{color:#8892b0;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:4px;transition:all .2s}
+.nav-link:hover{color:#fff;background:rgba(47,124,255,0.1)}
+.nav-link-active{color:#2f7cff}
+.page-wrap{max-width:800px;margin:0 auto;padding:56px 32px 100px}
+.page-eyebrow{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2f7cff;margin-bottom:12px}
+.page-title{font-size:36px;font-weight:800;letter-spacing:-.5px;line-height:1.1;margin-bottom:20px}
+.page-title span{color:#2f7cff}
+.page-intro{font-size:14px;color:#666;line-height:1.9;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2f7cff;margin-bottom:12px}
+.section-block{margin-bottom:36px}
+.section-block p{font-size:13px;color:#666;line-height:1.85;margin-bottom:14px}
+.section-block a{color:#2f7cff;text-decoration:none}
+.section-block h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.info-card{background:#0d0d1a;border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:22px;text-align:center}
+.info-card-icon{width:48px;height:48px;border-radius:12px;background:rgba(47,124,255,0.1);border:1px solid rgba(47,124,255,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:#2f7cff}
+.info-card h3{font-size:13px;font-weight:700;margin-bottom:6px;color:#fff}
+.info-card p{font-size:11px;color:#555;line-height:1.6}
+.info-card a{color:#2f7cff;text-decoration:none;font-size:12px}
+.contact-form{background:#0d0d1a;border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#555;margin-bottom:8px}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:#fff;font-family:'Poppins',sans-serif;font-size:13px;padding:12px 14px;outline:none;transition:border-color .2s;resize:vertical}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#444}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:rgba(47,124,255,0.5)}
+.form-group textarea{min-height:130px}
+.form-group select option{background:#0d0d1a;color:#fff}
+.submit-btn{width:100%;padding:14px;border-radius:12px;background:linear-gradient(135deg,#2f7cff,#1a5cd6);border:none;color:#fff;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.25s;margin-top:4px}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(47,124,255,0.5)}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.success-msg{display:none;text-align:center;padding:18px;background:rgba(46,204,113,0.07);border:1px solid rgba(46,204,113,0.2);border-radius:12px;color:#2ecc71;font-size:13px;font-weight:600;margin-top:16px}
+.job-card{background:#0d0d1a;border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:26px;margin-bottom:16px;transition:border-color .25s}
+.job-card:hover{border-color:rgba(47,124,255,0.3)}
+.job-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;flex-wrap:wrap;gap:8px}
+.job-title{font-size:16px;font-weight:800;color:#fff}
+.job-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:5px;background:rgba(47,124,255,0.1);border:1px solid rgba(47,124,255,0.2);color:#2f7cff}
+.job-badge.commission{background:rgba(255,165,0,0.08);border-color:rgba(255,165,0,0.2);color:#ffa500}
+.job-meta{font-size:11px;color:#444;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
+.job-desc{font-size:13px;color:#666;line-height:1.75}
+.job-perk{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:8px 14px;border-radius:8px;background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.15);font-size:11px;color:#2ecc71;font-weight:600}
+.apply-btn{display:inline-flex;align-items:center;gap:6px;margin-top:14px;margin-left:10px;padding:9px 18px;border-radius:9px;background:rgba(47,124,255,0.1);border:1px solid rgba(47,124,255,0.25);color:#2f7cff;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.2s}
+.apply-btn:hover{background:rgba(47,124,255,0.2)}
+.divider{height:1px;background:rgba(255,255,255,0.06);margin:32px 0}
+/* footer */
+.footer{background:linear-gradient(180deg,#080812 0%,#000 100%);border-top:1px solid rgba(47,124,255,0.15);position:relative}
+.footer::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(47,124,255,0.6),transparent)}
+.footer-inner{position:relative;z-index:1;padding:36px 32px 20px}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:20px}
+.footer-logo{width:80px;filter:drop-shadow(0 0 16px rgba(47,124,255,0.3));margin-bottom:10px}
+.footer-brand-name{font-size:15px;font-weight:800;letter-spacing:1px;margin-bottom:4px}
+.footer-brand-name span{color:#2f7cff}
+.footer-tagline{font-size:11px;color:#444;letter-spacing:.5px;line-height:1.6;max-width:200px}
+.footer-col-title{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#2f7cff;margin-bottom:12px}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:12px;color:#666;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-copy{font-size:10px;color:#333;letter-spacing:.8px;text-transform:uppercase}
+.footer-copy span{color:#2f7cff}
+.footer-badges{display:flex;gap:6px}
+.footer-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:5px;background:rgba(47,124,255,0.07);border:1px solid rgba(47,124,255,0.15);color:#4a7acc}
+@media(max-width:768px){.nav{padding:0 16px}.page-wrap{padding:36px 16px 80px}.page-title{font-size:28px}.card-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start}.footer-inner{padding:24px 14px 14px}}
+.footer{background:linear-gradient(180deg,#080812 0%,#000 100%);border-top:1px solid rgba(47,124,255,0.15);position:relative;overflow:hidden}
+.footer::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(47,124,255,0.6),transparent)}
+.footer-inner{position:relative;z-index:1;padding:36px 32px 20px}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:20px}
+.footer-logo{width:80px;filter:drop-shadow(0 0 16px rgba(47,124,255,0.3));margin-bottom:10px}
+.footer-brand-name{font-size:15px;font-weight:800;letter-spacing:1px;margin-bottom:4px}
+.footer-brand-name span{color:#2f7cff}
+.footer-tagline{font-size:11px;color:#444;letter-spacing:.5px;line-height:1.6;max-width:200px}
+.footer-col-title{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#2f7cff;margin-bottom:12px}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:12px;color:#666;text-decoration:none;letter-spacing:.3px;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-links a:hover{color:#fff}
+.footer-contact{display:flex;flex-direction:column;gap:8px}
+.footer-contact-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#666;letter-spacing:.3px}
+.footer-contact-item svg{flex-shrink:0;color:#2f7cff;opacity:.7}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-copy{font-size:10px;color:#333;letter-spacing:.8px;text-transform:uppercase}
+.footer-copy span{color:#2f7cff}
+.footer-badges{display:flex;gap:6px}
+.footer-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:5px;background:rgba(47,124,255,0.07);border:1px solid rgba(47,124,255,0.15);color:#4a7acc}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start}.footer-inner{padding:24px 16px 14px}}
+</style>
+</head>
+<body>
+<div class="nav">
+  <a href="/home" class="nav-back"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back</a>
+  <a href="/home" class="nav-logo-link"><img src="/bounit.png" class="nav-logo" alt="BoUnit NYC" onerror="this.onerror=null;this.src='/bounitlogo.png';"></a>
+  <div class="nav-links">
+    <a href="/about" class="nav-link">About</a>
+  </div>
+</div>
+<div class="page-wrap">
+  <div class="page-eyebrow">Legal</div>
+  <h1 class="page-title">Privacy <span>Policy</span></h1>
+  <p class="page-intro">Your privacy matters to us. Here's what we collect, how we use it, and how we protect it.</p>
+
+  <div class="section-block">
+    <div class="section-title">What We Collect</div>
+    <p>When you make a purchase, we collect your name, email address, shipping address, and payment information. Payment details are processed securely through Shopify and are never stored on our servers. We may also collect basic analytics data such as pages visited and browser type to improve the site.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">How We Use It</div>
+    <p>Your information is used to process orders, send shipping updates, and respond to customer inquiries. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Cookies</div>
+    <p>This site uses cookies to improve your browsing experience. Cookies help us remember your preferences and understand how the site is used. You can disable cookies in your browser settings, though some features may not work as intended.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Third-Party Services</div>
+    <p>We use Shopify for payment processing and order management. Their privacy policy applies to all transactions. We may use basic analytics tools to understand site traffic, but no personally identifiable information is shared.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Your Rights</div>
+    <p>You have the right to request access to, correction of, or deletion of your personal data. Contact us at <a href="mailto:support@bounitnyc.com">support@bounitnyc.com</a> and we'll take care of it.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">Updates</div>
+    <p>This policy may be updated from time to time. Changes will be posted on this page. Continued use of the site after changes are posted means you accept the updated policy.</p>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <img src="/bounit.png" class="footer-logo" alt="BoUnit NYC">
+        <div class="footer-brand-name">BOUNIT<span>NYC</span></div>
+        <div class="footer-tagline">NYC-based sneaker and streetwear shop. Every item hand-verified before it ships.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="/home">Home</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="/careers">Careers</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/refund">Refund Policy</a>
+        </div>
+        <div class="footer-contact" style="margin-top:16px">
+          <div class="footer-contact-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            support@bounitnyc.com
+          </div>
+          <div class="footer-contact-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            New York City, NY
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span>BoUnitNYC</span> · All Rights Reserved · Est. 2023</div>
+      <div class="footer-badges">
+        <span class="footer-badge">100% Authentic</span>
+        <span class="footer-badge">Verified</span>
+        <span class="footer-badge">SSL Secure</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
