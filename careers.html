@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Careers — BoUnitNYC</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0a12;color:#fff;min-height:100vh;overflow-x:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:0 32px;height:60px;background:rgba(8,8,18,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);position:sticky;top:0;z-index:200}
+.nav-logo{height:44px}
+.nav-back{display:flex;align-items:center;gap:8px;color:#8892b0;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:color .2s}
+.nav-back:hover{color:#fff}
+.nav-back:hover svg{transform:translateX(-3px)}
+.nav-back svg{transition:transform .2s}
+.nav-logo-link{display:flex;align-items:center}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{color:#8892b0;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:4px;transition:all .2s}
+.nav-link:hover{color:#fff;background:rgba(47,124,255,0.1)}
+.nav-link-active{color:#2f7cff}
+.page-wrap{max-width:800px;margin:0 auto;padding:56px 32px 100px}
+.page-eyebrow{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2f7cff;margin-bottom:12px}
+.page-title{font-size:36px;font-weight:800;letter-spacing:-.5px;line-height:1.1;margin-bottom:20px}
+.page-title span{color:#2f7cff}
+.page-intro{font-size:14px;color:#666;line-height:1.9;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2f7cff;margin-bottom:20px}
+.section-block p{font-size:13px;color:#666;line-height:1.85;margin-bottom:14px}
+.section-block a{color:#2f7cff;text-decoration:none}
+.job-card{background:#0d0d1a;border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:26px;margin-bottom:16px;transition:border-color .25s,box-shadow .25s}
+.job-card:hover{border-color:rgba(47,124,255,0.3);box-shadow:0 0 24px rgba(47,124,255,0.08)}
+.job-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;flex-wrap:wrap;gap:8px}
+.job-title{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.2px}
+.job-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:5px;background:rgba(47,124,255,0.1);border:1px solid rgba(47,124,255,0.2);color:#2f7cff}
+.job-badge.ambassador{background:rgba(255,165,0,0.08);border-color:rgba(255,165,0,0.2);color:#ffa500}
+.job-meta{font-size:11px;color:#444;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
+.job-desc{font-size:13px;color:#666;line-height:1.75}
+.job-perk{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:8px 14px;border-radius:8px;background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.15);font-size:11px;color:#2ecc71;font-weight:600;letter-spacing:.3px}
+.apply-btn{display:inline-flex;align-items:center;gap:6px;margin-top:14px;margin-left:10px;padding:9px 18px;border-radius:9px;background:rgba(47,124,255,0.1);border:1px solid rgba(47,124,255,0.25);color:#2f7cff;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.2s}
+.apply-btn:hover{background:rgba(47,124,255,0.2);border-color:rgba(47,124,255,0.5)}
+.divider{height:1px;background:rgba(255,255,255,0.06);margin:36px 0}
+
+.footer{background:linear-gradient(180deg,#080812 0%,#000 100%);border-top:1px solid rgba(47,124,255,0.15);position:relative;overflow:hidden}
+.footer::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(47,124,255,0.6),transparent)}
+.footer-inner{position:relative;z-index:1;padding:36px 32px 20px}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:20px}
+.footer-logo{width:80px;filter:drop-shadow(0 0 16px rgba(47,124,255,0.3));margin-bottom:10px}
+.footer-brand-name{font-size:15px;font-weight:800;letter-spacing:1px;margin-bottom:4px}
+.footer-brand-name span{color:#2f7cff}
+.footer-tagline{font-size:11px;color:#444;letter-spacing:.5px;line-height:1.6;max-width:200px}
+.footer-col-title{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#2f7cff;margin-bottom:12px}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:12px;color:#666;text-decoration:none;letter-spacing:.3px;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-links a:hover{color:#fff}
+.footer-contact{display:flex;flex-direction:column;gap:8px}
+.footer-contact-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#666;letter-spacing:.3px}
+.footer-contact-item svg{flex-shrink:0;color:#2f7cff;opacity:.7}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-copy{font-size:10px;color:#333;letter-spacing:.8px;text-transform:uppercase}
+.footer-copy span{color:#2f7cff}
+.footer-badges{display:flex;gap:6px}
+.footer-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:5px;background:rgba(47,124,255,0.07);border:1px solid rgba(47,124,255,0.15);color:#4a7acc}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start}.footer-inner{padding:24px 16px 14px}}
+@media(max-width:768px){.nav{padding:0 16px}.page-wrap{padding:36px 16px 80px}.page-title{font-size:28px}.footer-inner{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<style>
+/* Hide Shopify cart toggle on collection pages */
+iframe[src*="shopify"],
+.shopify-buy-frame--toggle,
+iframe[class*="shopify-buy-frame--toggle"],
+[id*="shopify-buy-frame-toggle"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+</style>
+<script>
+// Aggressively hide Shopify toggle on collection pages
+(function(){
+  function hideToggle(){
+    document.querySelectorAll('iframe').forEach(function(f){
+      if(f.src && f.src.includes('shopify') || 
+         (f.className && f.className.includes('toggle'))){
+        f.style.cssText='display:none!important;width:0!important;height:0!important;position:absolute!important;left:-9999px!important;';
+      }
+    });
+    document.querySelectorAll('[class*="toggle"]').forEach(function(el){
+      if(el.tagName==='IFRAME' || el.querySelector('iframe')){
+        el.style.cssText='display:none!important;width:0!important;height:0!important;';
+      }
+    });
+  }
+  hideToggle();
+  setInterval(hideToggle, 200);
+  if(window.MutationObserver){
+    new MutationObserver(hideToggle).observe(document.documentElement,{childList:true,subtree:true});
+  }
+})();
+</script>
+<div class="nav">
+  <a href="/home" class="nav-back"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back</a>
+  <a href="/home" class="nav-logo-link"><img src="/bounit.png" class="nav-logo" alt="BoUnit NYC" onerror="this.onerror=null;this.src='/bounitlogo.png';"></a>
+  <div class="nav-links">
+    <a href="/about" class="nav-link">About</a>
+  </div>
+</div>
+<div class="page-wrap">
+  <div class="page-eyebrow">Work With Us</div>
+  <h1 class="page-title">Join <span>BoUnitNYC</span></h1>
+  <p class="page-intro">We're a small team that moves fast and doesn't do things the corporate way. If you're plugged into streetwear culture and want to be part of something that's actually growing, keep reading. We don't care about your resume as much as we care about your passion and what you bring to the table.</p>
+
+  <div class="section-title">Open Roles</div>
+  <p style="font-size:12px;color:#555;letter-spacing:.5px;margin-bottom:24px;">All positions are currently filled. Check back soon — we're always growing.</p>
+
+  <div class="job-card">
+    <div class="job-top">
+      <div class="job-title">Social Media Manager</div>
+      <span class="job-badge">Part Time</span>
+      <span class="job-badge" style="background:rgba(255,165,0,0.1);border-color:rgba(255,165,0,0.3);color:#ffa500;">Coming Soon</span>
+    </div>
+    <div class="job-meta">Remote · Flexible</div>
+    <div class="job-desc">You know the culture and you know how to make content that people actually stop scrolling for. We need someone to run our Instagram, TikTok, and X — posting drops, behind the scenes, customer pickups, whatever makes sense. If your page already pops off or you've grown accounts before, you're exactly who we're looking for. Video editing skills are a big plus.</div>
+    <a href="mailto:support@bounitnyc.com?subject=Social Media Manager" class="apply-btn" style="opacity:0.35;pointer-events:none;cursor:not-allowed;">Apply →</a>
+  </div>
+
+  <div class="job-card">
+    <div class="job-top">
+      <div class="job-title">Content Creator</div>
+      <span class="job-badge">Part Time</span>
+      <span class="job-badge" style="background:rgba(255,165,0,0.1);border-color:rgba(255,165,0,0.3);color:#ffa500;">Coming Soon</span>
+    </div>
+    <div class="job-meta">Remote · Flexible</div>
+    <div class="job-desc">We need someone who can shoot and edit clean content — unboxings, outfit fits, shoe pickups, store walkthroughs. Doesn't have to be super produced, just has to feel real and look good. If you're already making content around sneakers or streetwear, send us what you got. We want to see your work more than anything else.</div>
+    <a href="mailto:support@bounitnyc.com?subject=Content Creator" class="apply-btn" style="opacity:0.35;pointer-events:none;cursor:not-allowed;">Apply →</a>
+  </div>
+
+  <div class="job-card">
+    <div class="job-top">
+      <div class="job-title">Brand Ambassador</div>
+      <span class="job-badge ambassador">Commission Based</span>
+      <span class="job-badge" style="background:rgba(255,165,0,0.1);border-color:rgba(255,165,0,0.3);color:#ffa500;">Coming Soon</span>
+    </div>
+    <div class="job-meta">Remote · Your Own Schedule</div>
+    <div class="job-desc">You get your own custom checkout code. Every time someone uses it to place an order, you earn a commission. Simple as that. No minimum hours, no requirements — just put people on to what we've got and eat off of it. Works best if you already have a following or a community that's into the culture, but we're open to hearing from anyone.</div>
+    <div class="job-perk">💰 Commission on every order using your code</div>
+    <a href="mailto:support@bounitnyc.com?subject=Brand Ambassador" class="apply-btn" style="opacity:0.35;pointer-events:none;cursor:not-allowed;">Apply →</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-block">
+    <p>None of these feel right but you still want in? Hit us at <a href="mailto:support@bounitnyc.com">support@bounitnyc.com</a> and tell us what you bring. We're always open to the right people.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <img src="/bounit.png" class="footer-logo" alt="BoUnit NYC">
+        <div class="footer-brand-name">BOUNIT<span>NYC</span></div>
+        <div class="footer-tagline">NYC-based sneaker and streetwear shop. Every item hand-verified before it ships.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="/home">Home</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="/careers">Careers</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/refund">Refund Policy</a>
+        </div>
+        <div class="footer-contact" style="margin-top:16px">
+          <div class="footer-contact-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            support@bounitnyc.com
+          </div>
+          <div class="footer-contact-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            New York City, NY
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span>BoUnitNYC</span> · All Rights Reserved · Est. 2023</div>
+      <div class="footer-badges">
+        <span class="footer-badge">100% Authentic</span>
+        <span class="footer-badge">Verified</span>
+        <span class="footer-badge">SSL Secure</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
